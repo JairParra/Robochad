@@ -96,7 +96,7 @@ class BuyAndHoldSPY(QCAlgorithm):
 
         # implement the exit process 
         # reached when portf is currently invested; and price is below or above by 10% 
-        elif self.entryPrice * 1.1 < price or self.entryPrice * 0.9 > price: 
+        elif self.entryPrice * 1.1 < price or self.entryPrice * 0.95 > price: 
             # liquidate all positions in portfolio 
             self.Liquidate() 
             self.Log("SELL SPY @" + str(price)) 
@@ -106,4 +106,4 @@ class BuyAndHoldSPY(QCAlgorithm):
 
 
         # Log portfolio value
-        self.Log(f"Portfolio value: {self.Portfolio.TotalPortfolioValue}")
+        self.Log(f"Current Portfolio value: {self.Portfolio.TotalPortfolioValue}")
