@@ -9,7 +9,7 @@ from AlgorithmImports import BrokerageName, AccountType
 from AlgorithmImports import Slice
 # endregion
 
-class DynamicBuyAndHoldAlgorithm(QCAlgorithm):
+class BuyAndHoldAlgorithm(QCAlgorithm):
 
     def Initialize(self):
         # Initialize backtesting parameters for strategy
